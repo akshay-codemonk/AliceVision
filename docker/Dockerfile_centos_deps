@@ -121,10 +121,10 @@ RUN test -e /usr/local/cuda/lib64/libcublas.so || ln -s /usr/lib64/libcublas.so 
 # RUN make -j ${CPU_CORES} png
 # RUN make -j ${CPU_CORES} libraw
 # RUN make -j ${CPU_CORES} boost
-# RUN make -j ${CPU_CORES} openimageio
-# RUN make -j ${CPU_CORES} alembic
+RUN make -j ${CPU_CORES} openimageio
+RUN make -j ${CPU_CORES} alembic
 # RUN make -j ${CPU_CORES} ffmpeg
-# RUN make -j ${CPU_CORES} opencv
+RUN make -j ${CPU_CORES} opencv
 # RUN make -j ${CPU_CORES} expat
 # 
 # RUN make -j ${CPU_CORES} cctag
